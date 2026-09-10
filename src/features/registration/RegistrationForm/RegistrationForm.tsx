@@ -14,14 +14,11 @@ export function RegistrationForm() {
       email: "",
       password: "",
     },
-    criteriaMode: "firstError",
   });
 
   const submitHandler: SubmitHandler<FormValues> = (data) => {
     console.log(data);
   };
-
-  console.log("render");
 
   return (
     <form onSubmit={handleSubmit(submitHandler)}>
@@ -53,8 +50,9 @@ export function RegistrationForm() {
       </div>
 
       <div>
-        <label>Пароль</label>
+        <label htmlFor="password">Пароль</label>
         <input
+          id="password"
           type="password"
           {...register("password", {
             required: "Введите пароль",
