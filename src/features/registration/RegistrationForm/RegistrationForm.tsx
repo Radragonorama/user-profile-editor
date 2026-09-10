@@ -21,7 +21,7 @@ export function RegistrationForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(submitHandler)}>
+    <form noValidate onSubmit={handleSubmit(submitHandler)}>
       <div>
         <label htmlFor="name">Имя:</label>
         <input
